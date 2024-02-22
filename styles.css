@@ -1,0 +1,106 @@
+/* Applies the Amazon font to everything and falls back on sans-serif */
+* {
+    font-family: 'Amazon Ember', sans-serif;
+
+}
+
+/* Creates the main layout of the page using CSS grid */
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 4fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "amz-logo . top-right"
+        "bot-left amz-login bot-right";
+}
+
+/* Controls the centering of the custom logo */
+.amz-logo {
+    text-align: center;
+}
+
+/* Controls the sizing of the custon logo */
+#amz-img {
+    width: 150px;
+    height: auto;
+}
+
+/* Contains the main container */
+.amz-login {
+    display: grid;
+}
+
+/* Contains all the contents of the login container */
+.amz-box {
+    padding-bottom: 40px;
+    place-self: center;
+}
+
+/* Controls the size of the Sign-in text */
+.card-title {
+    font-size: xx-large;
+    font-weight: normal;
+}
+
+/* Controls the boldness of the Email */
+.card-text {
+    font-weight: bold;
+}
+
+/* Controls boldness of the password text */
+.card-text2 {
+    font-weight: bold;
+}
+
+/* Changes the color of the default button to match the amazon button */
+.amz-btn {
+    background-color: #f2cd6f !important;
+    color: black !important;
+}
+
+/* Gets rid of the hyperlink underline */
+.pass-color {
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/* changes the color of the hypertext like it does on the real web page */
+.pass-color:hover {
+    color: #ea8e10;
+}
+
+/* Removes the underline from the tos hyperlinks */
+.tos {
+    text-decoration: none;
+}
+
+/* Contains the color details of the create button */
+.create-btn {
+    background-color: #eef0f2 !important;
+    color: black !important;
+}
+
+/* All the selectors below are for the <hr> like feature */
+.separator {
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+}
+
+.separator:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .25em;
+}
