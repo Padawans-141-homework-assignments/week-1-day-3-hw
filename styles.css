@@ -56,6 +56,7 @@
 
 /* Changes the color of the default button to match the amazon button */
 .amz-btn {
+    border-color: black !important;
     background-color: #f2cd6f !important;
     color: black !important;
 }
@@ -78,6 +79,7 @@
 
 /* Contains the color details of the create button */
 .create-btn {
+    border-color: black !important;
     background-color: #eef0f2 !important;
     color: black !important;
 }
